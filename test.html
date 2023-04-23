@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <div class="filter-wrapper mb-3">
+          <h1 class="text-center text-white">行程篩選</h1>
+          <div
+            id="app"
+            class="filter d-flex flex-column align-items-center justify-content-center"
+          >
+            <div class="d-flex justify-content-center mb-2">
+              <input
+                type="button"
+                value="關西"
+                class="btn-part text-white"
+                v-on:click="filterCounty('關西')"
+              />
+              <input
+                type="button"
+                value="關東"
+                class="btn-part text-white"
+                v-on:click="filterCounty('關東')"
+              />
+            </div>
+
+            <ul id="west" class="d-none" v-on:click="filterCard">
+              <li><input type="button" class="btn-county" value="全區" /></li>
+              <li><input type="button" class="btn-county" value="大阪府" /></li>
+              <li><input type="button" class="btn-county" value="京都府" /></li>
+              <li><input type="button" class="btn-county" value="兵庫縣" /></li>
+              <li><input type="button" class="btn-county" value="奈良縣" /></li>
+              <li><input type="button" class="btn-county" value="滋賀縣" /></li>
+              <li>
+                <input type="button" class="btn-county" value="和歌山縣" />
+              </li>
+            </ul>
+            <ul id="east" class="d-none" v-on:click="filterCard">
+              <li><input type="button" class="btn-county" value="全區" /></li>
+              <li><input type="button" class="btn-county" value="茨城縣" /></li>
+              <li><input type="button" class="btn-county" value="栃木縣" /></li>
+              <li><input type="button" class="btn-county" value="羣馬縣" /></li>
+              <li><input type="button" class="btn-county" value="埼玉縣" /></li>
+              <li><input type="button" class="btn-county" value="千葉縣" /></li>
+              <li><input type="button" class="btn-county" value="東京都" /></li>
+              <li>
+                <input type="button" class="btn-county" value="神奈川縣" />
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="card-wrapper row">
+          <!-- <div class="col-4">
+            <div class="card bg-black border">
+              <h2 class="text-center text-white">行程 01</h2>
+              <p class="text-center text-white">關東</p>
+              <p class="text-center text-white">茨城縣</p>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+    <!-- <script src="./data.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.1.4/vue.global.min.js"></script>
+
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
